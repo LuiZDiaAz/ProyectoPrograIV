@@ -1,5 +1,6 @@
 package com.example.appmascota
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -151,6 +152,7 @@ class RegisterActivity : AppCompatActivity() {
 
                     SaveUser(user)
                     Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
+                    showAcces()
                 }
             }
         }
@@ -172,4 +174,8 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
+    private fun showAcces() {
+        val siguienteActivity = Intent(this,MainActivity::class.java)
+        startActivity(siguienteActivity)
+    }
 }
